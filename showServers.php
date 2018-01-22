@@ -60,9 +60,11 @@
 	echo '		<title>' . htmlspecialchars( PRODUCT_NAME ) . ' gameservers</title>' . PHP_EOL;
 	echo '		<link rel="stylesheet" type="text/css" href="style/screen.css" />' . PHP_EOL;
 	echo '		<link rel="shortcut icon" type="image/x-icon" href="images/' . htmlspecialchars( strtolower( PRODUCT_NAME ) ) . '.ico" />' . PHP_EOL;
+	echo '		<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />' . PHP_EOL;
 	echo '	</head>' . PHP_EOL;
 	echo '	<body>' . PHP_EOL;
 	echo '		<h1><a href="' . htmlspecialchars( PRODUCT_URL ) . '">' . htmlspecialchars( PRODUCT_NAME ) . '</a> gameservers</h1>' . PHP_EOL;
+	echo '		<p><a href="https://zetaglest.dreamhosters.com/showPlayers.php">Player Activity</a></p>' . PHP_EOL;
 	echo '		<table id="gamesTable">' . PHP_EOL;
 	echo '			<tr>' . PHP_EOL;
 	echo '				<th title="glestVersion">Version</th>' . PHP_EOL;
@@ -103,7 +105,7 @@
 					$status_code = 1;
 				}
 			}
-			switch ( $status_code ) 
+			switch ( $status_code )
 			{
 				case 0:
 					$status_title = 'waiting for players';
