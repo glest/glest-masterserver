@@ -88,7 +88,7 @@
 	// When forking ZetaGlest and changing the version from 3.13.0-dev to 0.8.01, this value had to changed.
 	// a server with the lower version would show in the server info page, but the game stats would not be
 	// recorded. The value was at "v3.4.0-dev" -andy5995
-	if ( (version_compare($glestVersion,"v0.8.01","<") && $connectedClients == $networkSlots)  || $gameCmd == "gameOver")   // game servers' slots are all full
+	if ( (version_compare($glestVersion,"v0.8.01-dev","<") && $connectedClients == $networkSlots)  || $gameCmd == "gameOver")   // game servers' slots are all full
 	{
                 if($gameCmd == "gameOver" && $gameUUID != "")
                 {
