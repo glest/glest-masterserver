@@ -20,7 +20,7 @@
 	define( 'MYSQL_LINK_PERSIST', false );
 
         // Show games in the games list no older than x hours
-        define( 'MAX_HOURS_OLD_GAMES', 48 );
+        define( 'MAX_HOURS_OLD_GAMES', 720 );
 
         // Purge Finished Games that are less than X minutes
         define( 'MAX_MINS_OLD_COMPLETED_GAMES', 5 );
