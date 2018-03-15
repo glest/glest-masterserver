@@ -5,11 +5,11 @@
 
 	if ( !defined('INCLUSION_PERMITTED') || ( defined('INCLUSION_PERMITTED') && INCLUSION_PERMITTED !== true ) ) { die( 'This file must not be invoked directly.' ); }
 
-	define( 'PRODUCT_NAME',       'MegaGlest' );
-	define( 'PRODUCT_URL',        'http://megaglest.org' );
+	define( 'PRODUCT_NAME',       'ZetaGlest' );
+	define( 'PRODUCT_URL',        'https://github.com/ZetaGlest' );
 
 	define( 'MYSQL_HOST',         'localhost' );
-	define( 'MYSQL_DATABASE',     'megaglest_master' );
+	define( 'MYSQL_DATABASE',     'zetaglest_master' );
 	define( 'MYSQL_USER',         'not_root' );
 	define( 'MYSQL_PASSWORD',     'your_pwd' );
 
