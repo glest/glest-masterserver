@@ -9,24 +9,44 @@ body {
 	font-family: sans-serif;
 }
 
+a:link {
+	color: blue;
+	text-decoration: underline;
+}
+
+/* mouse over link */
+a:hover {
+	font-color: purple;
+	border-bottom-style: dotted;
+	text-decoration: none;
+}
+
 h1 {
 	text-align: center;
 }
 
 table {
 	width:      100%;
-	border:     2px solid black;
+#	border:     2px solid black;
 }
 
-th, td { 
-	border:     1px solid black;
+th, td {
+	border:     2px solid black;
 	padding:    5px;
 	text-align: center;
 	text-transform: capitalize;
 }
 
 th {
-	background-color: LightGray;
+	font-family: Arial;
+	background-color: black;
+	color: yellow;
+	font-size: 20px;
+	font-style: italic;
+}
+
+tr:hover {
+	background-color: #fffeac;
 }
 
 .waiting_for_players {
