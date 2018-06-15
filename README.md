@@ -1,9 +1,7 @@
-**This is code of the MegaGlest master server.**
+**This repo contains the code for the [ZetaGlest master server](https://zetaglest.dreamhosters.com/).**
 
-MegaGlest (http://megaglest.org) is a libre software cross
+[ZetaGlest](https://zetaglest.github.io/docs/) is a libre software cross
 platform real-time strategy game.
-
-![logo](http://megaglest.org/uploads/megaglest2011/logo/logo.png)
 
 > Master server does the following:
 > * publish game hosts (when a user decides to host)
@@ -12,4 +10,6 @@ platform real-time strategy game.
 > * list available game mods (CSV output)
 > * provide a version check for game installations
 
-go to the [Main Repository](https://github.com/MegaGlest/megaglest-source) ...
+ * [Main Project README](https://github.com/ZetaGlest/zetaglest-source/blob/develop/README.md)
+
+ * The [ZetaGlest organization](https://github.com/ZetaGlest) on GitHub
