@@ -26,7 +26,6 @@ The ZetaGlest Team hosts a live copy of this code at
 Please do not use this instance for your tests, but set up a copy of your own.
 
 
-
 INSTALLATION
 
 1. Setup a web server with PHP and a MySQL database server.
