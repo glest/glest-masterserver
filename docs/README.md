@@ -1,4 +1,4 @@
-ABOUT
+# ABOUT
 
 This is the ZetaGlest master server. ZetaGlest (https://github.com/ZetaGlest) is a
 libre software cross platform real-time strategy game.
@@ -26,7 +26,7 @@ The ZetaGlest Team hosts a live copy of this code at
 Please do not use this instance for your tests, but set up a copy of your own.
 
 
-INSTALLATION
+# INSTALLATION
 
 1. Setup a web server with PHP and a MySQL database server.
    Sucessfully tested configurations (on Debian GNU/Linux 6 and 7):
