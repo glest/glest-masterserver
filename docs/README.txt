@@ -22,7 +22,7 @@ text files (which use symbolic links for deduplication purposes) on the server.
 This may be replaced by a single configurable PHP script in the future.
 
 The ZetaGlest Team hosts a live copy of this code at
-  http://master.zetaglest.org
+  https://zetaglest.dreamhosters.com/
 Please do not use this instance for your tests, but set up a copy of your own.
 
 
