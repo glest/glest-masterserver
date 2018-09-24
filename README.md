@@ -1,5 +1,9 @@
 **This repo contains the code for the [ZetaGlest master server](https://zetaglest.dreamhosters.com/).**
 
+## Docs for testing and installing the code that runs the master server
+
+[docs/README.md](https://github.com/ZetaGlest/zetaglest-masterserver/blob/develop/docs/README.md)
+
 [ZetaGlest](https://zetaglest.github.io/docs/) is a libre software cross
 platform real-time strategy game.
 
