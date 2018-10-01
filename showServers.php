@@ -78,8 +78,8 @@
 	echo '				<th title="activeSlots">Total slots</th>' . PHP_EOL;
 	echo '				<th title="map">Map</th>' . PHP_EOL;
 	echo '				<th title="tileset">Tileset</th>' . PHP_EOL;
-	echo '				<th title="ip">IPv4 address</th>' . PHP_EOL;
-	echo '				<th title="externalServerPort">Game protocol port</th>' . PHP_EOL;
+	echo '				<!--<th title="ip">IPv4 address</th>-->' . PHP_EOL;
+	echo '				<!--<th title="externalServerPort">Game protocol port</th>-->' . PHP_EOL;
 	echo '				<th title="platform">Platform</th>' . PHP_EOL;
 	echo '				<th title="lasttime">Play date</th>' . PHP_EOL;
 	echo '			</tr>' . PHP_EOL;
@@ -179,10 +179,10 @@
 			printf( "\t\t\t\t<td>%s</td>%s", htmlspecialchars( $server['tileset'],            ENT_QUOTES ), PHP_EOL );
 
 			// ip
-			printf( "\t\t\t\t<td>%s</td>%s", htmlspecialchars( $server['ip'],                 ENT_QUOTES ), PHP_EOL );
+			printf( "\t\t\t\t<!--<td>%s</td>%s-->", htmlspecialchars( $server['ip'],                 ENT_QUOTES ), PHP_EOL );
 
 			// externalServerPort
-			printf( "\t\t\t\t<td>%s</td>%s", htmlspecialchars( $server['externalServerPort'], ENT_QUOTES ), PHP_EOL );
+			printf( "\t\t\t\t<!--<td>%s</td>%s-->", htmlspecialchars( $server['externalServerPort'], ENT_QUOTES ), PHP_EOL );
 
 			// platform
 			printf( "\t\t\t\t<td>%s</td>%s", htmlspecialchars( $server['platform'],           ENT_QUOTES ), PHP_EOL );
