@@ -63,7 +63,7 @@
 	echo '		<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />' . PHP_EOL;
 	echo '	</head>' . PHP_EOL;
 	echo '	<body>' . PHP_EOL;
-	echo '		<h1><a href="' . htmlspecialchars( PRODUCT_URL ) . '"><img src="https://raw.githubusercontent.com/ZetaGlest/zetaglest.github.io/master/docs/assets/images/zetaglest_logo_412x207.png" height="600" width="1200" title="https://github.com/ZetaGlest"></a> gameservers</h1>' . PHP_EOL;
+	echo '		<h1><a href="' . htmlspecialchars( PRODUCT_URL ) . '"><img src="https://raw.githubusercontent.com/ZetaGlest/zetaglest.github.io/master/docs/assets/images/zetaglest_logo_412x207.png" height="600" width="1200" title="ZetaGlest home page"></a></h1>' . PHP_EOL;
 	echo '		<p><a href="https://zetaglest.dreamhosters.com/showPlayers.php">Player Activity</a></p>' . PHP_EOL;
 	echo '		<table id="gamesTable">' . PHP_EOL;
 	echo '			<tr>' . PHP_EOL;
