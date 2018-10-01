@@ -1,3 +1,6 @@
+<p align="center"> 
+<img src="https://raw.githubusercontent.com/ZetaGlest/zetaglest.github.io/master/docs/assets/images/zetaglest_logo_412x207.png" height="600" width="1200" title="https://github.com/ZetaGlest">
+</p>
 **This repo contains the code for the [ZetaGlest master server](https://zetaglest.dreamhosters.com/).**
 
 ## Docs for testing and installing the code that runs the master server
