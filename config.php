@@ -25,6 +25,9 @@
         // Purge Finished Games that are less than X minutes
         define( 'MAX_MINS_OLD_COMPLETED_GAMES', 5 );
 
+  // Purge stats older than X months
+  define( 'MAX_MONTHS_DATA_STORAGE', 1);
+
 	// How many recently seen servers to store
 	define( 'MAX_RECENT_SERVERS', 5 );
 
