@@ -84,6 +84,16 @@ class Registry {
                 mysqli_query( Registry::$mysqliLink, 'DELETE FROM glestgameplayerstats WHERE gameUUID NOT IN (SELECT gameUUID from glestgamestats);');
         }
 
+	function purgeOldData()
+	{
+		// Purge completed games older than X months. 
+		mysqli_query( Registry::$mysqliLink, 'DELETE FROM glestserver WHERE status = 3 AND gameUUID in (SELECT gameUUID from glestgamestats where lasttime < DATE_SUB(NOW(), INTERVAL '.MAX_MONTHS_DATA_STORAGE.' MONTH ));');
+
+		// Cleanup game stats for games that are purged
+		mysqli_query( Registry::$mysqliLink, 'DELETE FROM glestgamestats WHERE gameUUID NOT IN (SELECT gameUUID from glestserver);');
+		mysqli_query( Registry::$mysqliLink, 'DELETE FROM glestgameplayerstats WHERE gameUUID NOT IN (SELECT gameUUID from glestgamestats);');
+	}
+
 	function addLatestServer($remote_ip, $service_port, $serverTitle, $connectedClients, $networkSlots )
 	{
 		// insert the new server
