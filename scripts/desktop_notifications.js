@@ -108,8 +108,6 @@ function timedRequest()
 				"	<th title=\"activeSlots\">Total slots</th>\n" +
 				"	<th title=\"map\">Map</th>\n" +
 				"	<th title=\"tileset\">Tileset</th>\n" +
-				"	<th title=\"ip\">IPv4 address</th>\n" +
-				"	<th title=\"externalServerPort\">Game protocol port</th>\n" +
 				"	<th title=\"platform\">Platform</th>\n" +
 				"	<th title=\"lasttime\">Play date</th>\n" +
 				"</tr>\n";
@@ -205,13 +203,7 @@ function timedRequest()
 
 					///  Tileset
 					table += "<td>" + escapeHtml(jsonText[i].tileset) + "</td>";
-
-					///  IP
-					table += "<td>" + escapeHtml(jsonText[i].ip) + "</td>";
-
-					///  Port
-					table += "<td>" + escapeHtml(jsonText[i].externalServerPort) + "</td>";
-
+					
 					///  Platform
 					table += "<td>" + escapeHtml(jsonText[i].platform) + "</td>";
 
