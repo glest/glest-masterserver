@@ -52,6 +52,9 @@
 	echo '	</head>' . PHP_EOL;
 	echo '	<body>' . PHP_EOL;
 	echo '		<h1><a href="' . htmlspecialchars( PRODUCT_URL ) . '">' . htmlspecialchars( PRODUCT_NAME ) . '</a> Top 100 Players</h1>' . PHP_EOL;
+    
+    echo ' <a href="index.php">Home | </a>'. PHP_EOL;
+    
 
 	if( $period == "day") {
 		echo '		<b>' . PHP_EOL;
