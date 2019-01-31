@@ -1,6 +1,6 @@
 <?php
 //	Copyright (C) 2012 Mark Vejvoda, Titus Tscharntke and Tom Reynolds
-//	The MegaGlest Team, under GNU GPL v3.0
+//	The Glest Team, under GNU GPL v3.0
 // ==============================================================
 
 	define( 'INCLUSION_PERMITTED', true );
@@ -85,7 +85,7 @@
 	// Representation starts here (but it should really be starting much later, there is way too much logic behind this point)
 	header( 'Content-Type: text/plain; charset=utf-8' );
 
-	// When forking ZetaGlest and changing the version from 3.13.0-dev to 0.8.01, this value had to changed.
+	// When forking Glest and changing the version from 3.13.0-dev to 0.8.01, this value had to changed.
 	// a server with the lower version would show in the server info page, but the game stats would not be
 	// recorded. The value was at "v3.4.0-dev" -andy5995
 	if ( (version_compare($glestVersion,"v0.8.01-dev","<") && $connectedClients == $networkSlots)  || $gameCmd == "gameOver")   // game servers' slots are all full

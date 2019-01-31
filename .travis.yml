@@ -1,4 +1,4 @@
-# Copied from https://scan.coverity.com/projects/megaglest-master-server/builds/new?tab=travis_ci
+# Copied from https://scan.coverity.com/projects/glest-master-server/builds/new?tab=travis_ci
 env:
   global:
    # The next declaration is the encrypted COVERITY_SCAN_TOKEN, created
@@ -13,9 +13,9 @@ language: php
 addons:
   coverity_scan:
     project:
-      name: "MegaGlest/megaglest-masterserver"
+      name: "Glest/glest-masterserver"
       description: "Build submitted via Travis CI"
-    notification_email: tomreyn@megaglest.org
+    notification_email: tomreyn@glest.org
     build_command_prepend: ""
     build_command: "cov-build --dir cov-int --no-command --fs-capture-search ./"
     #branch_pattern: coverity_scan

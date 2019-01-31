@@ -1,6 +1,6 @@
 <?php
 //	Copyright (C) 2012 Mark Vejvoda, Titus Tscharntke and Tom Reynolds
-//	The MegaGlest Team, under GNU GPL v3.0
+//	The Glest Team, under GNU GPL v3.0
 // ==============================================================
 
 	define( 'INCLUSION_PERMITTED', true );
@@ -143,7 +143,7 @@
 					        $controlTypeTitle = "CPU Ultra";
 					        break;
 				        case 4:
-					        $controlTypeTitle = "CPU Mega";
+					        $controlTypeTitle = "CPU Glest";
 					        break;
 				        case 5:
 					        $controlTypeTitle = "Network Player";
@@ -164,7 +164,7 @@
 					        $controlTypeTitle = "Network CPU Ultra";
 					        break;
 				        case 11:
-					        $controlTypeTitle = "Network CPU Mega";
+					        $controlTypeTitle = "Network CPU Glest";
 					        break;
 				        default:
 					        $controlTypeTitle = 'unknown';

@@ -1,15 +1,15 @@
 <?php
 //	Copyright (C) 2012 Mark Vejvoda, Titus Tscharntke and Tom Reynolds
-//	The MegaGlest Team, under GNU GPL v3.0
+//	The Glest Team, under GNU GPL v3.0
 // ==============================================================
 
 	if ( !defined('INCLUSION_PERMITTED') || ( defined('INCLUSION_PERMITTED') && INCLUSION_PERMITTED !== true ) ) { die( 'This file must not be invoked directly.' ); }
 
-	define( 'PRODUCT_NAME',       'ZetaGlest' );
-	define( 'PRODUCT_URL',        'https://github.com/ZetaGlest' );
+	define( 'PRODUCT_NAME',       'Glest' );
+	define( 'PRODUCT_URL',        'https://github.com/Glest' );
 
 	define( 'MYSQL_HOST',         'localhost' );
-	define( 'MYSQL_DATABASE',     'zetaglest_master' );
+	define( 'MYSQL_DATABASE',     'glest_master' );
 	define( 'MYSQL_USER',         'not_root' );
 	define( 'MYSQL_PASSWORD',     'your_pwd' );
 

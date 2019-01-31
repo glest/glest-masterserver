@@ -1,6 +1,6 @@
 <?php
 //	Copyright (C) 2012 Mark Vejvoda, Titus Tscharntke and Tom Reynolds
-//	The MegaGlest Team, under GNU GPL v3.0
+//	The Glest Team, under GNU GPL v3.0
 // ==============================================================
 
 	define( 'INCLUSION_PERMITTED', true );
@@ -21,8 +21,8 @@
 
 	if ( MGG_HOST != '' ) {
 		$body = MGG_HOST . ':' . MGG_PORT;
-		header( 'Content-Type: application/x-megaglest-gameserver; charset=utf-8' );
-		header( 'Content-Disposition: attachment; filename="megaglest_gameserver.mgg' );
+		header( 'Content-Type: application/x-glest-gameserver; charset=utf-8' );
+		header( 'Content-Disposition: attachment; filename="glest_gameserver.mgg' );
 		header( 'Content-Length: ' . strlen( $body ));
 		header( 'Accept-Ranges: bytes' );
 		echo $body;
@@ -63,8 +63,8 @@
 	echo '		<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />' . PHP_EOL;
 	echo '	</head>' . PHP_EOL;
 	echo '	<body>' . PHP_EOL;
-	echo '		<h1><a href="' . htmlspecialchars( PRODUCT_URL ) . '"><img class="logo" src="https://raw.githubusercontent.com/ZetaGlest/zetaglest.github.io/master/docs/assets/images/zetaglest_logo_412x207.png" height="207" width="412" title="ZetaGlest home page"></a></h1>' . PHP_EOL;
-	echo '		<p><a href="https://zetaglest.dreamhosters.com/showPlayers.php">Player Activity</a></p>' . PHP_EOL;
+	echo '		<h1><a href="' . htmlspecialchars( PRODUCT_URL ) . '"><img class="logo" src="https://raw.githubusercontent.com/Glest/glest.github.io/master/docs/assets/images/glest_logo_412x207.png" height="207" width="412" title="Glest home page"></a></h1>' . PHP_EOL;
+	echo '		<p><a href="https://glest.dreamhosters.com/showPlayers.php">Player Activity</a></p>' . PHP_EOL;
 	echo '		<table id="gamesTable">' . PHP_EOL;
 	echo '			<tr>' . PHP_EOL;
 	echo '				<th title="glestVersion">Version</th>' . PHP_EOL;
