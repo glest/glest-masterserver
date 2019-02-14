@@ -51,6 +51,9 @@
 	echo '		<link rel="shortcut icon" type="image/x-icon" href="images/' . htmlspecialchars( strtolower( PRODUCT_NAME ) ) . '.ico" />' . PHP_EOL;
 	echo '	</head>' . PHP_EOL;
 	echo '	<body>' . PHP_EOL;
+	echo '  <div class="navigation">';
+	echo '    <a href="/">Games List</a>';
+	echo '  </div>';
 	echo '		<h1><a href="' . htmlspecialchars( PRODUCT_URL ) . '">' . htmlspecialchars( PRODUCT_NAME ) . '</a> Top 100 Players</h1>' . PHP_EOL;
     
     echo ' <a href="index.php">Home | </a>'. PHP_EOL;
