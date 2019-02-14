@@ -2,7 +2,7 @@
 
 ## Docs for testing and installing the code that runs the master server
 
-[Glest](https://glest.github.io) is a libre software cross
+[Glest](https://glest.io) is a libre software cross
 platform real-time strategy game.
 
 > Master server does the following:
