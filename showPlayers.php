@@ -1,6 +1,6 @@
 <?php
 //	Copyright (C) 2012 Mark Vejvoda, Titus Tscharntke and Tom Reynolds
-//	The MegaGlest Team, under GNU GPL v3.0
+//	The Glest Team, under GNU GPL v3.0
 // ==============================================================
 
 	define( 'INCLUSION_PERMITTED', true );
@@ -27,16 +27,16 @@
 		$timelimit = " and s.lasttime >= DATE_SUB(NOW(), INTERVAL 1 MONTH)  ";
 	}
 
-	$players_in_db = mysql_query( 'select playername, count(*) as c, SEC_TO_TIME(sum(ggs.framesToCalculatePlaytime)/30) as playtime from glestgameplayerstats s , glestgamestats ggs where s.gameUUID=ggs.gameUUID and controltype>4 '.$timelimit.' group by playername having c >1 order by c desc,playername  LIMIT 100' );
+	$players_in_db = mysqli_query( Registry::$mysqliLink, 'select playername, count(*) as c, SEC_TO_TIME(sum(ggs.framesToCalculatePlaytime)/30) as playtime from glestgameplayerstats s , glestgamestats ggs where s.gameUUID=ggs.gameUUID and controltype>4 '.$timelimit.' group by playername having c >1 order by c desc,playername  LIMIT 100' );
 	$all_players = array();
-	while ( $players = mysql_fetch_array( $players_in_db ) )
+	while ( $players = mysqli_fetch_array( $players_in_db ) )
 	{
 		array_push( $all_players, $players );
 	}
 	unset( $players_in_db );
 	unset( $players );
 
-	db_disconnect( DB_LINK );
+	db_disconnect( Registry::$mysqliLink );
 	unset( $linkid );
 
 	// Representation starts here
@@ -51,7 +51,13 @@
 	echo '		<link rel="shortcut icon" type="image/x-icon" href="images/' . htmlspecialchars( strtolower( PRODUCT_NAME ) ) . '.ico" />' . PHP_EOL;
 	echo '	</head>' . PHP_EOL;
 	echo '	<body>' . PHP_EOL;
+	echo '  <div class="navigation">';
+	echo '    <a href="/">Games List</a>';
+	echo '  </div>';
 	echo '		<h1><a href="' . htmlspecialchars( PRODUCT_URL ) . '">' . htmlspecialchars( PRODUCT_NAME ) . '</a> Top 100 Players</h1>' . PHP_EOL;
+    
+    echo ' <a href="index.php">Home | </a>'. PHP_EOL;
+    
 
 	if( $period == "day") {
 		echo '		<b>' . PHP_EOL;

@@ -1,10 +1,7 @@
 <?php
-//      Copyright (C) 2012 Mark Vejvoda, Titus Tscharntke and Tom Reynolds
-//      The Glest Team, under GNU GPL v3.0
-// ==============================================================
 
 	// This script can be invoked directly by a cron job on a regular basis:
-	// /path/to/php -f /path/to/script.php
+	// /path/to/php -f /path/to/purgeOldData.php
 
 	define( 'INCLUSION_PERMITTED', true );
 	require_once( 'config.php' );
@@ -12,7 +9,7 @@
 
 	define( 'DB_LINK', db_connect() );
 
-	cleanupServerList();
+	purgeOldData();
 
 	db_disconnect( Registry::$mysqliLink );
 ?>

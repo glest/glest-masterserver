@@ -1,6 +1,6 @@
 <?php
 //	Copyright (C) 2012 Mark Vejvoda, Titus Tscharntke and Tom Reynolds
-//	The MegaGlest Team, under GNU GPL v3.0
+//	The Glest Team, under GNU GPL v3.0
 // ==============================================================
 
 	define( 'INCLUSION_PERMITTED', true );
@@ -32,27 +32,27 @@
 	        // consider replacing this by a cron job
 	        cleanupServerList();
 
-                $whereClause = 'gameUUID=\'' . mysql_real_escape_string( $gameUUID ) . '\'';
+                $whereClause = 'gameUUID=\'' . mysqli_real_escape_string(Registry::$mysqliLink, $gameUUID ) . '\'';
 
-	        $stats_in_db = mysql_query( 'SELECT * FROM glestgamestats WHERE ' . $whereClause . ';');
+	        $stats_in_db = mysqli_query( Registry::$mysqliLink, 'SELECT * FROM glestgamestats WHERE ' . $whereClause . ';');
 	        $all_stats = array();
-	        while ( $stats = mysql_fetch_array( $stats_in_db ) )
+	        while ( $stats = mysqli_fetch_array( $stats_in_db ) )
 	        {
 		        array_push( $all_stats, $stats );
 	        }
 	        unset( $stats_in_db );
 	        unset( $stats );
 
-	        $player_stats_in_db = mysql_query( 'SELECT * FROM glestgameplayerstats WHERE ' . $whereClause . ' ORDER BY factionIndex;');
+	        $player_stats_in_db = mysqli_query( Registry::$mysqliLink, 'SELECT * FROM glestgameplayerstats WHERE ' . $whereClause . ' ORDER BY factionIndex;');
 	        $all_player_stats = array();
-	        while ( $player_stats = mysql_fetch_array( $player_stats_in_db ) )
+	        while ( $player_stats = mysqli_fetch_array( $player_stats_in_db ) )
 	        {
 		        array_push( $all_player_stats, $player_stats );
 	        }
 	        unset( $player_stats_in_db );
 	        unset( $player_stats );
 
-	        db_disconnect( DB_LINK );
+	        db_disconnect( Registry::$mysqliLink );
 	        unset( $linkid );
 
 	        foreach( $all_stats as $stats )
@@ -143,7 +143,7 @@
 					        $controlTypeTitle = "CPU Ultra";
 					        break;
 				        case 4:
-					        $controlTypeTitle = "CPU Mega";
+					        $controlTypeTitle = "CPU Glest";
 					        break;
 				        case 5:
 					        $controlTypeTitle = "Network Player";
@@ -164,7 +164,7 @@
 					        $controlTypeTitle = "Network CPU Ultra";
 					        break;
 				        case 11:
-					        $controlTypeTitle = "Network CPU Mega";
+					        $controlTypeTitle = "Network CPU Glest";
 					        break;
 				        default:
 					        $controlTypeTitle = 'unknown';

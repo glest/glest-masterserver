@@ -1,6 +1,6 @@
 <?php
 //	Copyright (C) 2012 Mark Vejvoda, Titus Tscharntke and Tom Reynolds
-//	The MegaGlest Team, under GNU GPL v3.0
+//	The Glest Team, under GNU GPL v3.0
 // ==============================================================
 
 	define( 'INCLUSION_PERMITTED', true );
@@ -12,16 +12,16 @@
 	// consider replacing this by a cron job
 	cleanupServerList();
 
-	$servers_in_db = mysql_query( 'SELECT * FROM glestserver WHERE status <> 3 ORDER BY status, connectedClients > 0 DESC, (networkSlots - connectedClients) , ip DESC;' );
+	$servers_in_db = mysqli_query(Registry::$mysqliLink, 'SELECT * FROM glestserver WHERE status <> 3 ORDER BY status, connectedClients > 0 DESC, (networkSlots - connectedClients) , ip DESC;' );
 	$all_servers = array();
-	while ( $server = mysql_fetch_array( $servers_in_db ) )
+	while ( $server = mysqli_fetch_array( $servers_in_db ) )
 	{
 		array_push( $all_servers, $server );
 	}
 	unset( $servers_in_db );
 	unset( $server );
 
-	db_disconnect( DB_LINK );
+	db_disconnect( Registry::$mysqliLink );
 
 	// Representation starts here
 	header( 'Content-Type: text/plain; charset=utf-8' );

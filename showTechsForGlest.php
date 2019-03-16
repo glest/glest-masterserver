@@ -1,6 +1,6 @@
 <?php
 //	Copyright (C) 2012 Mark Vejvoda, Titus Tscharntke and Tom Reynolds
-//	The MegaGlest Team, under GNU GPL v3.0
+//	The Glest Team, under GNU GPL v3.0
 // ==============================================================
 
 	define( 'INCLUSION_PERMITTED', true );
@@ -16,16 +16,16 @@
                 $glestVersion = "";
         }
 
-	$techs_in_db = mysql_db_query( MYSQL_DATABASE, 'SELECT * FROM glesttechs WHERE disabled=0 ORDER BY techname;' );
+	$techs_in_db = mysqli_query( Registry::$mysqliLink, 'SELECT * FROM glesttechs WHERE disabled=0 ORDER BY techname;' );
 	$all_techs = array();
-	while ( $tech = mysql_fetch_array( $techs_in_db ) )
+	while ( $tech = mysqli_fetch_array( $techs_in_db ) )
 	{
 		array_push( $all_techs, $tech );
 	}
 	unset( $techs_in_db );
 	unset( $tech );
 
-	db_disconnect( DB_LINK );
+	db_disconnect( Registry::$mysqliLink );
 
 	// Representation starts here
 	header( 'Content-Type: text/plain; charset=utf-8' );
