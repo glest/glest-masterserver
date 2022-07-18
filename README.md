@@ -1,3 +1,12 @@
+
+========================================================================================
+
+ARCHIVED
+========
+This project is no longer maintained. If you would like to contact about this, please find us on **[Discord](https://discord.gg/es3EyBB)**.
+
+========================================================================================
+
 **This repo contains the code for the [Glest master server](https://glest.dreamhosters.com/).**
 
 ## Docs for testing and installing the code that runs the master server
